@@ -62,7 +62,7 @@ After changes to the ```main()``` function are made, run the file, and the follo
 
 ### Example
 
-As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. This data can be found in the [image folder in the repository](https://github.com/klmcmillan/image_classification_sandbox/tree/master/images) After running classify_images_knn.py, the following performance metrics were printed to screen:
+As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. This data can be found in [here](https://github.com/klmcmillan/image_classification_sandbox/tree/master/images). After running classify_images_knn.py, the following performance metrics were printed to screen:
 
 ![Classifier performance metrics](https://github.com/klmcmillan/image_classification_sandbox/blob/master/examples/knn_metrics.png)
 
