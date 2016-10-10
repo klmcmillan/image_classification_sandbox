@@ -49,7 +49,7 @@ n_neighbors = 15
 n_mesh = 150
 ```
 
-```data_dir``` is the directory where the image data is saved. ```test_size``` is the fraction of total image data that should be categorized as testing data. For example, if ```test_size = 0.4```, 40% of the image data will be used as testing data and 60% will be used as training data. ```n_components``` is the [principle component analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) set of dimmensions. ```n_neighbors``` is the KNN number of neighbors. ```n_mesh``` is the number of elements in the meshgrid. This parameter is used for adjusting the visualization of the classification decision boundaries.
+```data_dir``` is the directory where the image data is saved. ```test_size``` is the fraction of total image data that should be categorized as testing data. For example, if ```test_size = 0.4```, 40% of the image data will be used as testing data and 60% will be used as training data. ```n_components``` is the PCA set of dimmensions. ```n_neighbors``` is the KNN number of neighbors. ```n_mesh``` is the number of elements in the meshgrid. This parameter is used for adjusting the visualization of the classification decision boundaries.
 
 After changes to the ```main()``` function are made, run the file, and the following will happen:
 
