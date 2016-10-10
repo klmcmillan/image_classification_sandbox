@@ -20,16 +20,20 @@ Because the name of the game is image classification, this file should be run mu
 
 ## classify_images_knn.py
 
-This file uses the [k-nearest neighbors (KNN) algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) to classify images from a dataset created using [download_images.py](#download). The following pre-processing steps are taken to prepare the image data for input into the KNN algorithm:
+This file uses the [k-nearest neighbors (KNN) algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) to classify images from a dataset created using [download_images.py](#download).
+
+### Pre-processing
+
+The following pre-processing steps are taken to prepare the image data for input into the KNN algorithm:
 
 1. Transform the 2D images into a 1D arrays of RGB pixels
 2. Reduce the dimensionality of the feature space through the use of [principle component analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis)
 
-### Transform images
+#### Transform images
 
 In any classifier, features need to be determined from the data. One way to transform images into a format that can be used within a classification algorithm is to convert the images into a set of RGB pixels. Each image is saved as a (m x n) array of pixels. This 2D array can be flattened into a (1, m x n) array. Most of the images downloaded from Bing have a standard array size of (230 x 170) pixels. The flattened version of this array is 39,100 RGB pixels. If we stopped here, each image would be represented by 39,100 features!
 
-### Dimensionality reduction
+#### Dimensionality reduction
 
 39,100 features is far too many features to input into the classification algorithm. One way to reduce the feature space is to use PCA. The ultimate goal of PCA is to explain the maximum amount of variance in the data with the fewest number of features (principle components). In this code, the user can explictly set the number of principle conponents that should be used. For visualization of the data, the user would set the number of principle components equal to 2.
 
