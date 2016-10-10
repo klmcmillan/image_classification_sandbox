@@ -20,7 +20,22 @@ Because the name of the game is image classification, this file should be run mu
 
 ## classify_images_knn.py
 
-This file uses the [k-nearest neighbors algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) to classify images from the dataset you created using [download_images.py](#download). In order to use this file, the following lines from the ```main()``` function need to be changed:
+This file uses the [k-nearest neighbors algorithm (KNN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) to classify images from a dataset created using [download_images.py](#download). The following pre-processing steps are taken to prepare the image data for input into the KNN algorithm:
+
+1. Transform the 2D images into a 1D arrays of RGB pixels
+2. Reduce the dimensionality of the feature space through the use of [principle component analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis)
+
+### Transform images
+
+In any classifier, features need to be determined from the data. One way to transform images into a format that can be used within a classification algorithm is to convert the images into a set of RGB pixels. Each image is saved as a (m x n) array of pixels. This 2D array can be flattened into a (1, m x n) array. Most of the images downloaded from Bing have a standard array size of (230 x 170) pixels. The flattened version of this array is 39,100 RGB pixels. If we stopped here, each image would be represented by 39,100 features!
+
+### Dimensionality reduction
+
+39,100 features is far too many features to input into the classification algorithm. One way to reduce the feature space is to use PCA. The ultimate goal of PCA is to explain the maximum amount of variance in the data with the fewest number of features (principle components). In this code, the user can explictly set the number of principle conponents. For visualization of the data, the user would set the number of principle components equal to 2.
+
+## -----
+
+In order to use this file, the following lines from the ```main()``` function need to be changed:
 
 ```python
 data_dir = 'images'
@@ -29,3 +44,9 @@ n_components = 5
 n_neighbors = 15
 n_mesh = 150
 ```
+
+```data_dir``` is the directory where the image data is saved. ```test_size``` is the fraction of total image data that should be categorized as testing data. For example, if ```test_size = 0.4```, 40% of the image data will be used as testing data and 60% will be used as training data. ```n_components``` is the [principle component analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) set of dimmensions. ```n_neighbors``` is the KNN number of neighbors. ```n_mesh``` is the number of elements in the meshgrid. This parameter is used for adjusting the visualization of the classification decision boundaries.
+
+After changes to the ```main()``` function are made, run the file, and the following will happen:
+
+
