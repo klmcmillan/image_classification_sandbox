@@ -56,6 +56,8 @@ After changes to the ```main()``` function are made, run the file, and the follo
 5. The trained KNN classifier will be applied to the testing data, and performance metrics will be printed to screen (example provided below)
 6. A plot of the decision boundaries for each class will be generated (example provided below)
 
+### Example
+
 As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. After running classify_images_knn.py, the following performance metrics were printed to screen:
 
 ![Classifier performance metrics](https://github.com/klmcmillan/image_classification_sandbox/blob/master/examples/knn_metrics.png)
