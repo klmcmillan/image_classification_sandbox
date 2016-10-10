@@ -56,7 +56,7 @@ After changes to the ```main()``` function are made, run the file, and the follo
 1. Each image will be transformed into a 1D array and saved to a [sklearn-like dataset](http://scikit-learn.org/stable/datasets/)
 2. The data will be split into training and testing data
 3. The feature space of the training and testing data will be reduced to ```n_components``` number of features
-4. A KNN classifier will be trained using the training data
+4. A [KNN classifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) will be trained using the training data
 5. The trained KNN classifier will be applied to the testing data, and performance metrics will be printed to screen (example provided below)
 6. A plot of the decision boundaries for each class will be generated (example provided below)
 
