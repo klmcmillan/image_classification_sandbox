@@ -33,7 +33,7 @@ In any classifier, features need to be determined from the data. One way to tran
 
 39,100 features is far too many features to input into the classification algorithm. One way to reduce the feature space is to use PCA. The ultimate goal of PCA is to explain the maximum amount of variance in the data with the fewest number of features (principle components). In this code, the user can explictly set the number of principle conponents that should be used. For visualization of the data, the user would set the number of principle components equal to 2.
 
-## File usage
+### File usage
 
 In order to use this file, the following lines from the ```main()``` function need to be changed:
 
