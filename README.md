@@ -4,7 +4,7 @@ This repository provides scripts to create unique image datasets and explore dif
 
 ## <a name="download"></a>download_images.py
 
-This file can be used to create image datasets based on user-specified web searches using the Bing search engine. In order to use this file, the following lines from the ```main()``` function need to be changed to refelect the desired image searches:
+This file can be used to create image datasets based on user-specified web searches using the Bing search engine. In order to use this file, the following lines from the ```main()``` function need to be changed to refleect the desired image searches:
 
 ```python
 save_dir = 'images'
@@ -31,7 +31,7 @@ The following pre-processing steps are taken to prepare the image data for input
 
 #### Transform images
 
-In any classifier, features need to be determined from the data. One way to transform images into a format that can be used within a classification algorithm is to convert the images into a set of RGB pixels. Each image is saved as a (m x n) array of pixels. This 2D array can be flattened into a (1, m x n) array. Most of the images downloaded from Bing have a standard array size of (230 x 170) pixels. The flattened version of this array is 39,100 RGB pixels. If we stopped here, each image would be represented by 39,100 features!
+In any classification problem, features need to be determined from the data. One way to transform images into a format that can be used within a classification algorithm is to convert the images into a set of RGB pixels. Each image is saved as a (m x n) array of pixels. This 2D array can be flattened into a (1, m x n) array. Most of the images downloaded from Bing have a standard array size of (230 x 170) pixels. The flattened version of this array is 39,100 RGB pixels. If we stopped here, each image would be represented by 39,100 features!
 
 #### Dimensionality reduction
 
@@ -53,7 +53,7 @@ n_mesh = 150
 
 After changes to the ```main()``` function are made, run the file, and the following will happen:
 
-1. Each image will be transformed into a 1D array and saved to [sklearn-like dataset](http://scikit-learn.org/stable/datasets/)
+1. Each image will be transformed into a 1D array and saved to a [sklearn-like dataset](http://scikit-learn.org/stable/datasets/)
 2. The data will be split into training and testing data
 3. The feature space of the training and testing data will be reduced to ```n_components``` number of features
 4. A KNN classifier will be trained using the training data
@@ -62,7 +62,7 @@ After changes to the ```main()``` function are made, run the file, and the follo
 
 ### Example
 
-As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. This data can be found in [here](https://github.com/klmcmillan/image_classification_sandbox/tree/master/images). After running classify_images_knn.py, the following performance metrics were printed to screen:
+As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. This data can be found [here](https://github.com/klmcmillan/image_classification_sandbox/tree/master/images). After running classify_images_knn.py, the following performance metrics were printed to screen:
 
 ![Classifier performance metrics](https://github.com/klmcmillan/image_classification_sandbox/blob/master/examples/knn_metrics.png)
 
