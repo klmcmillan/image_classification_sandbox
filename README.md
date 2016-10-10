@@ -54,7 +54,7 @@ After changes to the ```main()``` function are made, run the file, and the follo
 3. The feature space of the training and testing data will be reduced to ```n_components``` number of features
 4. A KNN classifier will be trained using the training data
 5. The trained KNN classifier will be applied to the testing data, and performance metrics will be printed to screen (example provided below)
-6. A plot of the decision boundaries for each class will be generated
+6. A plot of the decision boundaries for each class will be generated (example provided below)
 
 As an example, I created a dataset of images of common electronics (e.g. computers, cell phones) and food (e.g. pizza, tacos) using multiple instances of download_images.py. After running classify_images_knn.py, the following performance metrics were printed to screen:
 
